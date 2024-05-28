@@ -24,6 +24,7 @@ app.config.from_object(Config)
 # Babel instance
 babel = Babel(app)
 
+
 @app.route('/', strict_slashes=False)
 def index() -> str:
     """
