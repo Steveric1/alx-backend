@@ -5,17 +5,18 @@ Setting up a bask flask app to create a single / route
 and an index.html template that simply outputs 'Welcome to Holberton'
 """
 
-from flask import Flask, render_template
+from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
 # Create a sigle route
 
 
-@app.route('/', methods=['GET'], strict_slashes=False)
-def index():
+@app.route('/', strict_slashes=False)
+def index() -> str:
     """
-    Returns a simple string
+    Renders a basic html template
     """
     return render_template('0-index.html')
 
